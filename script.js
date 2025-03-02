@@ -2,7 +2,7 @@ const messageForm = document.querySelector(".prompt__form");
 const chatHistoryContainer = document.querySelector(".chats");
 const suggestionItems = document.querySelectorAll(".suggests__item");
 
-const themeToggleButton = document.getElementById("themeToggler");
+// const themeToggleButton = document.getElementById("themeToggler");
 const clearChatButton = document.getElementById("deleteButton");
 
 // State variables
@@ -18,7 +18,7 @@ const loadSavedChatHistory = () => {
     const isLightTheme = localStorage.getItem("themeColor") === "light_mode";
 
     document.body.classList.toggle("light_mode", isLightTheme);
-    themeToggleButton.innerHTML = isLightTheme ? '<i class="bx bx-moon"></i>' : '<i class="bx bx-sun"></i>';
+    // themeToggleButton.innerHTML = isLightTheme ? '<i class="bx bx-moon"></i>' : '<i class="bx bx-sun"></i>';
 
     chatHistoryContainer.innerHTML = '';
 
@@ -216,12 +216,12 @@ const handleOutgoingMessage = () => {
 };
 
 // Toggle between light and dark themes
-themeToggleButton.addEventListener('click', () => {
-    const isLightTheme = document.body.classList.toggle("light_mode");
-    localStorage.setItem("themeColor", isLightTheme ? "light_mode" : "dark_mode");
-    const newIconClass = isLightTheme ? "bx bx-moon" : "bx bx-sun";
-    themeToggleButton.querySelector("i").className = newIconClass;
-});
+// themeToggleButton.addEventListener('click', () => {
+//     const isLightTheme = document.body.classList.toggle("light_mode");
+//     localStorage.setItem("themeColor", isLightTheme ? "light_mode" : "dark_mode");
+//     const newIconClass = isLightTheme ? "bx bx-moon" : "bx bx-sun";
+//     themeToggleButton.querySelector("i").className = newIconClass;
+// });
 
 // Clear all chat history
 clearChatButton.addEventListener('click', () => {
