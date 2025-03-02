@@ -168,6 +168,7 @@ body.hide-header .header{
 }
 
 .prompt__form-input{
+    direction: ltr;
     height: 100%;
     width: 100%;
     border: none;
